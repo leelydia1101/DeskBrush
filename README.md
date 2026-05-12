@@ -15,22 +15,41 @@ A transparent desktop overlay drawing and annotation tool built with PyQt5.
 - **Undo / Clear** — One-click stroke or text removal
 - **Frosted-glass toolbar** — Draggable, semi-transparent, rounded corners
 
-## Installation
+## Quick Start (No Installation Required)
+
+**For Windows users:**
+
+1. Go to [Releases](https://github.com/leelydia1101/DeskBrush/releases/latest)
+2. Download `DeskBrush.exe`
+3. Double-click to run — no Python or dependencies needed!
+
+## Development
+
+### Prerequisites
 
 ```bash
 pip install PyQt5
 ```
 
-## Usage
+### Run from Source
 
 ```bash
 python main.py
 ```
 
-### Controls
+### Build Executable
 
-| Action | Shortcut / Button |
-|--------|-------------------|
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --icon=icon.ico --name DeskBrush main.py
+```
+
+The executable will be in `dist/DeskBrush.exe`.
+
+## Controls
+
+| Action | Shortcut |
+|--------|----------|
 | Toggle Draw/Pass mode | `Ctrl+D` |
 | Undo | `Ctrl+Shift+Z` |
 | Clear all | `Ctrl+Shift+C` |
@@ -43,6 +62,7 @@ deskbrush/
 ├── main.py           # Application entry point
 ├── canvas.py         # Transparent overlay canvas (pen + text)
 ├── toolbar.py        # Frosted-glass floating toolbar
+├── icon.ico          # Application icon
 └── requirements.txt  # Dependencies
 ```
 
